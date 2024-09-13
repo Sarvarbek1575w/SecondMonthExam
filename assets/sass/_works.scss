@@ -1,0 +1,121 @@
+.works > div {
+  display: flex;
+  flex-direction: column;
+  gap: 56px;
+  margin-top: 120px;
+}
+
+.works_top {
+  display: flex;
+  gap: 32px;
+  flex-direction: column;
+  h2 {
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 60px;
+    color: $blackTEXT;
+  }
+  p {
+    @include Ptext-style;
+  }
+}
+
+.works_bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.works_card {
+  max-width: 32%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+  .works_card_bottom {
+    padding-left: 32px;
+    padding-right: 70px;
+    padding-top: 16px;
+    padding-bottom: 32px;
+    display: flex;
+    gap: 16px;
+    border: 1px solid #0000001f;
+    flex-direction: column;
+    border-top: none;
+    h4 {
+      @include h4-style;
+    }
+    p {
+      @include Ptext-style;
+    }
+    a {
+      @include more;
+    }
+  }
+}
+
+@media (max-width: 725px) {
+  .works_bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 20px;
+  }
+
+  .works_card {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    img {
+      width: 100%;
+      height: auto;
+    }
+
+    .works_card_bottom {
+      padding-left: 32px;
+      padding-right: 70px;
+      padding-top: 16px;
+      padding-bottom: 32px;
+      display: flex;
+      gap: 16px;
+      border: 1px solid #0000001f;
+      flex-direction: column;
+      border-top: none;
+      h4 {
+        @include h4-style;
+      }
+      p {
+        @include Ptext-style;
+      }
+      a {
+        @include more;
+      }
+    }
+  }
+
+  .works_top {
+    display: flex;
+    gap: 32px;
+    flex-direction: column;
+    h2 {
+      font-size: 38px;
+      font-weight: 600;
+      line-height: 50px;
+      color: $blackTEXT;
+    }
+    p {
+      @include Ptext-style;
+    }
+  }
+
+  .works_bottom :nth-child(3) {
+    display: none;
+  }
+}

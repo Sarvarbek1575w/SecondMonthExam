@@ -1,0 +1,157 @@
+.showcase > div {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  margin-top: 24px;
+  justify-content: space-between;
+}
+
+.showcase_left {
+  gap: 35px;
+  display: flex;
+  align-self: center;
+  flex-direction: column;
+  h1 {
+    font-size: 52px;
+    font-weight: 600;
+    line-height: 65px;
+    color: $blackTEXT;
+  }
+
+  p {
+    @include Ptext-style;
+  }
+
+  a {
+    @include more;
+  }
+}
+
+.showcase_right {
+  width: 50%;
+  position: relative;
+
+  img {
+    width: 100%;
+  }
+  img:hover + .about_img,
+  .about_img:hover {
+    display: block;
+  }
+}
+.about_img {
+  @include about-img;
+}
+
+//  media
+
+@media (max-width: 1138px) {
+  .showcase_left {
+    gap: 35px;
+    display: flex;
+    align-self: center;
+    flex-direction: column;
+    h1 {
+      font-size: 42px;
+      font-weight: 600;
+      line-height: 65px;
+      color: $blackTEXT;
+    }
+
+    p {
+      @include Ptext-style;
+    }
+
+    a {
+      @include more;
+    }
+  }
+}
+
+@media (max-width: 966px) {
+  .showcase_left {
+    gap: 35px;
+    display: flex;
+    align-self: center;
+    flex-direction: column;
+    h1 {
+      font-size: 32px;
+      font-weight: 600;
+      line-height: 65px;
+      color: $blackTEXT;
+    }
+
+    p {
+      @include Ptext-style;
+      font-size: 12px !important;
+    }
+
+    a {
+      @include more;
+    }
+  }
+}
+
+@media (max-width: 832px) {
+  .showcase > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    justify-content: center;
+  }
+
+  .showcase_left {
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    h1 {
+      font-size: 44px;
+      font-weight: 600;
+      line-height: 65px;
+      color: $blackTEXT;
+    }
+
+    p {
+      @include Ptext-style;
+      font-size: 16px !important;
+    }
+
+    a {
+      @include more;
+    }
+  }
+  .showcase_right {
+    width: 100%;
+    position: relative;
+  }
+}
+
+@media (max-width: 380px) {
+  .showcase_left {
+    width: 100%;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: left;
+
+    h1 {
+      font-size: 30pxpx;
+      font-weight: 600;
+      line-height: 45px;
+      color: $blackTEXT;
+    }
+
+    p {
+      @include Ptext-style;
+      font-size: 15px !important;
+    }
+
+    a {
+      @include more;
+      font-size: 15px !important;
+      align-self: start;
+    }
+  }
+}

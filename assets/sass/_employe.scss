@@ -1,0 +1,145 @@
+.employe > div {
+  display: flex;
+  flex-direction: column;
+  gap: 72px;
+}
+
+.employe_top {
+  h2 {
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 60px;
+    color: $blackTEXT;
+  }
+}
+
+.employe_bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.employe_bottom_top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.employe_card {
+  width: 45%;
+  border: 1px solid #00000026;
+  box-shadow: 0 4px 15px #00000026;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  .employe_card_left {
+    width: 51px;
+    border-radius: 0 0 10px 10px;
+    height: 100%;
+    img {
+      height: 59px;
+      width: 7%;
+    }
+  }
+
+  .employe_crad_right {
+    padding: 32px;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    .employe_card_right_top {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      h4 {
+        @include h4-style;
+      }
+      a {
+        @include more;
+      }
+    }
+    .employe_card_right_bottom {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      a {
+        color: #bfbfc7;
+        i {
+          font-size: 25px;
+          &:hover {
+            color: #7f7f7f;
+          }
+        }
+      }
+    }
+  }
+}
+.musr {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.employe_bottom_center,
+.employe_bottom_bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@media(max-width:858px){
+    .employe_bottom_bottom{
+        display: none;
+    }
+    .employe_card {
+        width: 45%;
+        border: 1px solid #00000026;
+        box-shadow: 0 4px 15px #00000026;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        .employe_card_left {
+          width: 51px;
+          border-radius: 0 0 10px 10px;
+          height: 100%;
+          img {
+            height: 59px;
+            width: 7%;
+          }
+        }
+      
+        .employe_crad_right {
+          padding: 32px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 40px;
+          align-items: start;
+        }
+    }
+}
+
+@media(max-width:554px){
+    .musr2{
+        display: none;
+    }
+
+    .employe_bottom{
+        display: flex;
+        gap: 14px;
+
+        flex-direction: column;
+    }
+    .employe_bottom_top{
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+    }
+    .employe_card {
+        width: 100%;
+    }
+    .employe_bottom_top {
+        display: flex;
+        align-items: center;
+        justify-content:center;
+      }
+}

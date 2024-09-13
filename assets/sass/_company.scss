@@ -1,0 +1,87 @@
+.company > div {
+  gap: 90px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 120px;
+}
+
+.company_top {
+  align-items: start;
+  h2 {
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 60px;
+    color: $blackTEXT;
+  }
+}
+
+.company_bottom {
+  display: flex;
+  gap: 71px;
+  flex-direction: column;
+
+  .company_bottom_top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.company_card {
+  gap: 15px;
+  align-items: center;
+  text-align: center;
+  display: flex;
+  padding: 20px;
+  flex-direction: column;
+  h4 {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 27px;
+    text-align: center;
+    color: $blackTEXT;
+  }
+  p {
+    @include Ptext-style;
+  }
+}
+.company_bottom_bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@media (max-width: 777px) {
+  .company_bottom {
+    display: flex;
+    gap: 71px;
+    flex-direction: column;
+
+    .company_bottom_top {
+      display: grid;
+      grid-template-columns: repeat(2, 2fr);
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+  .company_bottom_bottom {
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+@media (max-width: 461px) {
+  .company_bottom {
+    display: flex;
+    gap: 71px;
+    flex-direction: column;
+
+    .company_bottom_top {
+      display: none;
+      grid-template-columns: repeat(2, 2fr);
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+}

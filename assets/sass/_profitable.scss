@@ -1,0 +1,36 @@
+.profitable > div {
+  // display: flex;
+  // align-items: center;
+  // margin-top: 67px;
+  // display: flex;
+  // justify-content: space-between;
+  // align-items: center;
+  // width:100%;
+  // height: 450px; /* Balansini rasmga moslashtirish uchun */
+  // position: relative;
+  // overflow: hidden;
+  margin-top: 67px;
+  img {
+    width: 100%;
+  }
+}
+
+// .profitable_left{
+//     z-index: 99;
+//     width: 50%;
+//     img{
+//         width: 100%;
+//     }
+// }
+
+// .profitable_right{
+//     background-image: url('/imges/jpg-png/profitable-right-img.png'); /* O'ngdagi rasm yo'li */
+//     background-size: cover;
+//     background-position: center;
+//     width: 50%;
+//     height: 100%;
+//     right: 0;
+//     clip-path: polygon(20% 0, 100% 0, 100% 100%, 30% 100%); /* To'g'ri joylashuv */
+//     position: absolute;
+
+// }

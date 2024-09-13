@@ -1,0 +1,173 @@
+.delivery-father {
+  gap: 150px;
+  display: flex;
+  margin-top: 25px;
+  padding: 40px 40px;
+  border-radius: 20px;
+  align-items: center;
+  width: 100%;
+  border: 1px solid #d7d7dd;
+  box-shadow: 0 4px 20px #00000026;
+}
+.delivery-father :nth-child(3) {
+  border-right: none;
+}
+.delivery_card {
+  gap: 24px;
+  display: flex;
+  width: 25%;
+  flex-direction: column;
+  padding-right: 50px;
+
+  border-right: 1px solid #d7d7dd;
+  .delivery_card_bottom {
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+    h4 {
+      @include h4-style;
+    }
+    p {
+      @include Ptext-style;
+    }
+  }
+}
+
+@media (max-width: 1101px) {
+  .delivery-father {
+    gap: 110px;
+  }
+}
+
+@media (max-width: 923px) {
+  .delivery-father {
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 25px;
+    padding: 40px 40px;
+    border-radius: 20px;
+    align-items: center;
+    width: 100%;
+    border: none;
+    box-shadow: none;
+  }
+  .delivery_card {
+    gap: 24px;
+    display: grid;
+    padding: 32px;
+    border-radius: 20px;
+    grid-template-columns: 100px auto;
+    width: 100%;
+    padding-right: 50px;
+    border-right: none;
+    border: 1px solid #d7d7dd;
+    box-shadow: 0 4px 20px #00000026;
+    .delivery_card_top {
+      width: 100px;
+      img {
+        width: 100%;
+      }
+    }
+    .delivery_card_bottom {
+      align-self: start;
+      gap: 10px;
+      display: flex;
+      flex-direction: column;
+      h4 {
+        @include h4-style;
+      }
+      p {
+        @include Ptext-style;
+      }
+    }
+  }
+}
+
+@media (max-width: 668px) {
+  .delivery_card {
+    gap: 24px;
+    display: grid;
+    padding: 32px;
+    border-radius: 20px;
+    grid-template-columns: 100px auto;
+    width: 100%;
+    padding-right: 50px;
+    border-right: none;
+    border: 1px solid #d7d7dd;
+    box-shadow: 0 4px 20px #00000026;
+    .delivery_card_top {
+      width: 70px;
+      img {
+        width: 100%;
+      }
+    }
+    .delivery_card_bottom {
+      align-self: start;
+      gap: 10px;
+      display: flex;
+      flex-direction: column;
+      h4 {
+        @include h4-style;
+        font-size: 15px !important ;
+        line-height: 15px !important;
+      }
+      p {
+        @include Ptext-style;
+        line-height: 15px !important;
+        font-size: 12px !important;
+      }
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .delivery-father {
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 25px;
+    border-radius: 20px;
+    align-items: center;
+    padding: 0 0;
+    width: 100%;
+    box-shadow: none;
+    border: 1px solid #d7d7dd;
+    box-shadow: 0 4px 20px #00000026;
+  }
+
+  .delivery_card {
+    gap: 14px;
+    display: grid;
+    padding: 15px;
+    border-radius: 20px;
+    grid-template-columns: repeat(1, 2fr);
+    width: 100%;
+    padding-right: 0;
+    border-right: none;
+    border: none;
+    box-shadow: none;
+    .delivery_card_top {
+      width: 70px;
+      img {
+        width: 100%;
+      }
+    }
+    .delivery_card_bottom {
+      align-self: start;
+      gap: 10px;
+      display: flex;
+      flex-direction: column;
+      h4 {
+        @include h4-style;
+        font-size: 15px !important ;
+        line-height: 15px !important;
+      }
+      p {
+        @include Ptext-style;
+        line-height: 15px !important;
+        font-size: 12px !important;
+      }
+    }
+  }
+}

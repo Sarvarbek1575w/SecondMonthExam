@@ -1,0 +1,132 @@
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans:wght@100;200;300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Exo+2:wght@100;200;300;400;500;600;800;900&display=swap");
+
+body {
+  font-family: "Exo 2", sans-serif;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+button {
+  cursor: pointer;
+}
+
+// main colors
+
+$blackTEXT: #363738;
+$grayTEXT: #6b6b6c;
+$mainGREEN: #0b7572;
+$white: #ffffff;
+
+// fonts
+
+$ptsans: "PT Sans", sans-serif;
+
+// mixins
+@mixin h4-style {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 27px;
+    color: $blackTEXT;
+  }
+
+
+@mixin Ptext-style {
+  font-family: $ptsans;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: $grayTEXT;
+}
+
+@mixin more {
+  font-family: $ptsans;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  color: $blackTEXT;
+  transition: 0.3s;
+  position: relative;
+  padding-bottom: 1px;
+  &:hover {
+    color: rgba(0, 0, 255, 0.67);
+  }
+  &::before {
+    content: "";
+    width: 20%;
+    bottom: -5px;
+    height: 3px;
+    position: absolute;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: 0.4s transform;
+    background-color: rgba(0, 0, 255, 0.67);
+  }
+  &:hover::before {
+    transform: scaleX(1);
+  }
+}
+
+@mixin about-img {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    width: 90%;
+    padding: 10px;
+    backdrop-filter: blur(5px);
+    display: none;
+    border-radius: 10px;
+    transition: .4s;
+  h4 {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 27px;
+    color: #ffffff96;
+  }
+
+  a {
+    font-family: $ptsans;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    color: rgba(255, 255, 255, 0.586);
+    transition: 0.3s;
+    position: relative;
+    padding-bottom: 1px;
+    &:hover {
+      color: rgba(1, 34, 124, 0.945);
+      text-shadow: 0 0 15px #fff;
+    }
+    &::before {
+      content: "";
+      width: 100%;
+      bottom: -5px;
+      height: 1.5px;
+      position: absolute;
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: 0.4s transform;
+      background-color: rgba(0, 0, 255, 0.429);
+    }
+    &:hover::before {
+      transform: scaleX(1);
+    }
+  }
+}
